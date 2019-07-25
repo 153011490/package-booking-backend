@@ -20,4 +20,8 @@ public class YunDanService {
     public List<YunDan> findAll() {
         return  yunDanReposity.findAll();
     }
+
+    public void updateYunDan(YunDan yunDan) {
+        yunDanReposity.save(yunDan);
+    }
 }

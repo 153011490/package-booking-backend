@@ -29,4 +29,16 @@ public class YunDanController {
         return yunDanService.findAll();
     }
 
+    @PutMapping
+    public String updateStatus(@RequestBody YunDan yunDan){
+        try{
+            yunDanService.updateYunDan(yunDan);
+            return "更新成功";
+        }catch (Exception e){
+            return "更新失败";
+        }
+    }
+
+
+
 }
